@@ -22,7 +22,7 @@
 --save - сохранить локально.  
 -g - флаг глобальности.  
 
-### Import and Export ES5 and ES6
+### Import and Export ES5/ES6
 * ES5
 > Для отправки модуля: module.exports = `Имя модуля`  
 > Для приема модуля: const 'Имя модуля' = require('./путь к модулю')  
