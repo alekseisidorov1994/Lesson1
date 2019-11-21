@@ -32,6 +32,13 @@
 > Import `Имя файла` from `'путь к файлу'`  
 Если использовать в node.js import/export возникнет ошибка. Для того, чтобы ошибки не было необходим Babel. Babel преобразуем ES5 -> ES6.  
 Загрузить babel: npm install -g @babel/core @babel/node @babel/cli @babel/preset-env @babel/plugin-transform-runtime @babel/runtime babel-loader  
-Помимо установки пакетов создаем файл .babelrc  
+Помимо установки пакетов создаем файл .babelrc {"presets": ["@babel/preset-env"],"plugins": ["@babel/plugin-transform-runtime"]}  
+Используем команду babel-node `script.js` -(ваш файл со скриптом). Теперь ES6 работает для node.js.
+### Webpack  
+Webpack - инуструмент, позводяющий скомпилировать модули в единый js-файл. webpack -dev-server -собарнный за нас сервер, который может быть использовать для быстрой разработки приложения.  Скачать пакет для работы: `npm i webpack webpack-dev-server webpack-cli`. Далее в package.json в scripts копируем:  
+"serve": "webpack-dev-server --mode development",  
+"nodemon": "nodemon --exec babel-node server.js",  
+"build": "webpack --mode production",  
+"test": "mocha --require @babel/register"  
 
 
