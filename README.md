@@ -31,5 +31,7 @@
 > export default 'Имя файла'. Если хотим отпавить более 2-х, то : {`Имя файла`, `Имя файла`}  
 > Import `Имя файла` from `'путь к файлу'`  
 Если использовать в node.js import/export возникнет ошибка. Для того, чтобы ошибки не было необходим Babel. Babel преобразуем ES5 -> ES6.  
+Загрузить babel: npm install -g @babel/core @babel/node @babel/cli @babel/preset-env @babel/plugin-transform-runtime @babel/runtime babel-loader  
+Помимо установки пакетов создаем файл .babelrc  
 
 
